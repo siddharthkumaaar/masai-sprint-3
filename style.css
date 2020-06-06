@@ -1,0 +1,19 @@
+#up{
+    border: 1px dashed red; 
+    height: 100px;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+#mid{
+    border: 1px dashed blue;
+    height: 300px;
+    background-color: #1a1847;
+    color: white;
+}
+
+#down{
+    border: 1px dashed green;
+    height: 200px;
+}
