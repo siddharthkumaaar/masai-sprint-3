@@ -3,13 +3,16 @@
     <head>
         <title>Currency Converter</title>
         <link type="text/css" rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
-        <div id="up">Currency Converter</div>
-        <div id="mid">
+    <div class="container-fluid">
+        <div class="row" id="up"><div class="col text-center"><h1>Currency Converter</h1></div></div>
+        <div class="row" id="mid">
+            <div class="col text-center mt-1">
             <label for="From">
                 From:
-                <select name='currencies' id="from_currencies">
+                <select name='currencies' id="from_currencies" class="form-control">
                     <option value='AED' title='United Arab Emirates Dirham'>AED</option>
                     <option value='AFN' title='Afghan Afghani'>AFN</option>
                     <option value='ALL' title='Albanian Lek'>ALL</option>
@@ -183,7 +186,7 @@
             </label>
             <label for="To">
                 To:
-                <select name='currencies' id="to_currencies">
+                <select name='currencies' id="to_currencies" class="form-control">
                     <option value='AED' title='United Arab Emirates Dirham'>AED</option>
                     <option value='AFN' title='Afghan Afghani'>AFN</option>
                     <option value='ALL' title='Albanian Lek'>ALL</option>
@@ -357,11 +360,78 @@
             </label>
             <label for="Amount">
                 Amount:
-                <input type="text" id="amt"/>
+                <input type="text" id="amt" class="form-control"/>
             </label>
-            <button id="btn">Convert</button>
+            <button id="btn" class="btn btn-info">Convert</button>
+            <button class="btn btn-primary" id="history">Last day rate</button>
         </div>
-        <div id="down">Converted Amount Is </div>
+        </div>
+        <div class="row">
+            <div id="down" class="col-12 col-sm-12 col-md-12 col-lg-12 text-center"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">From</th>
+                            <th scope="col">To</th>
+                            <th scope="col">Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>USD</td>
+                            <td>INR</td>
+                            <td id="usdinr"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>USD</td>
+                            <td>JPY</td>
+                            <td id="usdjpy"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>USD</td>
+                            <td>AUD</td>
+                            <td id="usdaud"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>USD</td>
+                            <td>EUR</td>
+                            <td id="usdeur"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>USD</td>
+                            <td>GBP</td>
+                            <td id="usdgbp"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="dt"></td>
+                            <td id="usdinr1"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     </body>
     <script src="work.js"></script>
 </html>
